@@ -8,6 +8,7 @@ import instagramIcon from '@/assets/icons/social/instagram.svg'
 import { RouterLink } from 'vue-router'
 import { useLang } from '@/stores/lang'
 import { CONTACT_HREF } from '@/data/contact'
+import { PARTNERS } from '@/data/partners'
 
 const { t } = useLang()
 
@@ -71,6 +72,19 @@ const SOCIALS = [
             </li>
           </ul>
         </div>
+      </div>
+
+      <!-- Partner logos sit directly on the dark footer (no tiles) -->
+      <div class="flex flex-col gap-6 border-t border-accent-700 pt-10">
+        <p class="font-serif text-2xl">{{ t.partners.footerTitle }}</p>
+        <ul class="grid gap-6 sm:grid-cols-3">
+          <li v-for="p in PARTNERS" :key="p.id" class="flex flex-col gap-3">
+            <p class="font-nav text-base text-accent-100">{{ t.partners.roles[p.roleKey] }}</p>
+            <div class="flex h-24 items-center">
+              <img :src="p.logo" :alt="p.name" class="max-w-full object-contain" :class="p.height" loading="lazy" />
+            </div>
+          </li>
+        </ul>
       </div>
 
       <div class="flex flex-col items-center gap-2 border-t border-accent-700 pt-10 text-center">

@@ -9,6 +9,13 @@ export const bn = {
       'অনলাইনে যা দেখছেন, সবকিছুই সত্য নাও হতে পারে। কোনো খবর, ছবি, ভিডিও বা মেসেজ শেয়ার করার আগে একটু থামুন। দেখে নিন তথ্যটি ঠিক কি না তারপর সিদ্ধান্ত নিন।',
     mythCta: 'ভুল ধারণা বনাম সত্য জানুন',
     pledgePrimary: 'অঙ্গীকার করুন',
+    coFundingLabel: 'সহ-অর্থায়ন সহায়তা',
+  },
+
+  partners: {
+    title: 'যৌথ সহযোগিতায়',
+    footerTitle: 'আমাদের অংশীদার',
+    roles: { implementedBy: 'বাস্তবায়নে', partner: 'সহযোগী সংস্থা', coFunding: 'সহ-অর্থায়ন সহায়তা' },
   },
 
   statsBar: [
@@ -355,6 +362,13 @@ export const en = {
       "Not everything you see online is true. Before you share a post, photo, video, or forwarded message, pause for a moment. Check whether it's accurate — then decide.",
     mythCta: 'Learn about Myth vs Fact',
     pledgePrimary: 'Take the Pledge',
+    coFundingLabel: 'Co-funding support',
+  },
+
+  partners: {
+    title: 'Co-powered by',
+    footerTitle: 'Our Partners',
+    roles: { implementedBy: 'Implemented by', partner: 'Implementing partner', coFunding: 'Co-funding support' },
   },
 
   statsBar: [

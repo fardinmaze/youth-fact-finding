@@ -4,6 +4,27 @@ Newest first. Each entry says what changed, the decisions behind it, and what is
 
 ---
 
+## 2026-09-28
+
+### Changed
+
+**Partner logos (new `src/data/partners.js`, logos copied from `assets/Logos/` into `src/assets/logos/`)**
+- One list of partners (ActionAid Bangladesh, SHED, EU) with logo, name, role label key and a per-logo height so the wide wordmark, square badge and flag+text logo look balanced. Used by the three places below.
+- **Home – new "Co-powered by" section** (`src/components/home/PartnersSection.vue`) right after the stats bar (2nd section): heading + the three logos in a centred row (wraps on phones).
+- **Hero** (`HeroSection.vue`): "Co-funding support" label + EU logo on a small white tile, in one compact row under the CTAs.
+  - From 1280px the hero used to be a fixed height (the image's proportions). The Bangla copy already nearly filled it at ~1440px, so the extra row got clipped. The hero now grows when its content needs more height (`xl:overflow-visible` + 32px vertical padding); at 1440px it grows ~80px and the illustration is slightly larger/cropped on the pale left sky. At 1280px and 1920px it looks as before.
+- **Footer** (`AppFooter.vue`): new "Our Partners" row above Get in Touch — each logo on a white tile with its role: Implemented by (ActionAid), Implementing partner (SHED), Co-funding support (EU). White tiles because the EU logo's blue text is unreadable on the dark footer.
+- Copy in `src/i18n/content.js`: `hero.coFundingLabel` and a new `partners` block (bn + en).
+
+- Follow-up (same day, user request): removed the white tiles behind the logos in the hero and footer — logos now sit directly on the illustration / dark footer. On the footer the EU logo's dark-blue text has low contrast; the EU's official white (negative) version of the logo would fix it.
+
+### Open items
+- Bangla wording needs sign-off: "যৌথ সহযোগিতায়" (Co-powered by), "আমাদের অংশীদার" (Our Partners), "বাস্তবায়নে" / "সহযোগী সংস্থা" / "সহ-অর্থায়ন সহায়তা".
+- SHED's role label ("Implementing partner") is an assumption — confirm.
+- EU visibility rules may require specific wording/size for the EU emblem; check against the grant's communication guidelines.
+
+---
+
 ## 2026-09-23
 
 ### Changed

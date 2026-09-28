@@ -3,6 +3,7 @@ import { RouterLink } from 'vue-router'
 import heroBg from '@/assets/photos/hero-bg.png'
 import arrowRight from '@/assets/icons/arrow-right-24.svg'
 import { useLang } from '@/stores/lang'
+import { EU_PARTNER } from '@/data/partners'
 
 const { t } = useLang()
 </script>
@@ -10,11 +11,11 @@ const { t } = useLang()
 <template>
   <!--
     Illustration = assets/hero image.png (2167×726). Its people start ~42% across and the left ~40% is pale sky
-    meant for the copy. From xl (1280px) the hero is exactly the image's proportions — so it is never cropped —
+    meant for the copy. From xl (1280px) the hero keeps the image's proportions (never cropped) unless the copy needs more height — then it grows (image crops a little of the pale left sky)
     and the text column is kept inside that pale left zone. Below xl the illustration is a band above the text,
     so the copy never sits on top of the people.
   -->
-  <section class="hero relative flex flex-col overflow-hidden xl:aspect-[2167/726] xl:max-h-[760px] xl:justify-center">
+  <section class="hero relative flex flex-col overflow-hidden xl:overflow-visible xl:aspect-[2167/726] xl:max-h-[760px] xl:justify-center">
     <div
       aria-hidden="true"
       class="pointer-events-none relative h-56 overflow-hidden sm:h-72 lg:h-96 xl:absolute xl:inset-0 xl:h-auto"
@@ -29,7 +30,7 @@ const { t } = useLang()
     />
 
     <!-- 82px side padding (29px on phones, where 82px would leave too little width); from xl the copy is vertically centred on the illustration -->
-    <div class="relative px-[29px] pb-10 pt-6 md:px-[82px] xl:py-0">
+    <div class="relative px-[29px] pb-10 pt-6 md:px-[82px] xl:py-8">
       <div class="hero-copy flex w-full max-w-[601px] flex-col items-start gap-6">
         <!-- no whitespace around {{ line }} on purpose: the second line's leading space is part of the design -->
         <p
@@ -58,6 +59,15 @@ const { t } = useLang()
           >
             {{ t.hero.pledgePrimary }}
           </button>
+        </div>
+
+        <!-- EU co-funding credit, logo directly on the illustration (no tile) -->
+        <!-- one compact row: from xl the hero has a fixed height, so this must add as little as possible -->
+        <div class="flex items-center gap-3">
+          <p class="font-heading text-sm font-medium text-accent-700">{{ t.hero.coFundingLabel }}</p>
+          <div>
+            <img :src="EU_PARTNER.logo" :alt="EU_PARTNER.name" class="h-8 w-auto" />
+          </div>
         </div>
       </div>
     </div>
