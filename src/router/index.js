@@ -15,7 +15,9 @@ const router = createRouter({
     { path: '/learn/:slug', name: 'learn-detail', component: ModuleDetailView },
     // `bare` = no site header/footer: a full-window PDF reader, opened in a new tab from the module page
     { path: '/learn/:slug/read', name: 'learn-read', component: PdfReaderView, meta: { bare: true } },
-    { path: '/fact-checker', name: 'fact-checker', component: FactCheckerView },
+    { path: '/youth-fact-finding', name: 'fact-checker', component: FactCheckerView },
+    // old address, kept so shared links and bookmarks still work
+    { path: '/fact-checker', redirect: '/youth-fact-finding' },
     { path: '/help', name: 'help', component: HelpView },
     { path: '/contact', name: 'contact', component: ContactView },
   ],

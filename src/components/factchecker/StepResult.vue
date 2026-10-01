@@ -74,7 +74,7 @@ function handleDownload() {
     contentTypeLabel: contentTypeLabel.value,
     body: content.value.body,
     slogan: t.value.footer.slogan,
-    filename: `catch-bangladesh-fact-check-${props.verdict}.png`,
+    filename: `catch-bangladesh-youth-fact-finding-${props.verdict}.png`,
     imageUrl: props.session.content_image_url,
     linkPreview: linkPreview.value,
     linkThumbnailUrl: linkThumbnailUrl.value,

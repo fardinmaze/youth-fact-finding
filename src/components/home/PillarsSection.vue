@@ -89,7 +89,7 @@ onUnmounted(() => {
           {{ t.pillarsSection.headline }}
         </p>
         <RouterLink
-          to="/fact-checker"
+          to="/youth-fact-finding"
           class="flex items-center gap-3 rounded-button bg-brand-500 px-[18px] py-4 font-heading text-sm font-medium leading-none text-accent-50"
         >
           {{ t.pillarsSection.ctaButton }}

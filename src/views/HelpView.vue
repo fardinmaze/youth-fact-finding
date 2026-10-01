@@ -37,7 +37,7 @@ const { t } = useLang()
         {{ t.helpPage.backHome }}
       </RouterLink>
       <RouterLink
-        to="/fact-checker"
+        to="/youth-fact-finding"
         class="rounded-button bg-brand-500 px-6 py-3.5 text-center font-heading text-sm font-medium text-accent-50"
       >
         {{ t.helpPage.backFactChecker }}

@@ -20,7 +20,7 @@ const activeKey = computed(() => {
   return ''
 })
 
-const ctaLabel = computed(() => (isBn.value ? 'ফ্যাক্ট চেকার মডিউল' : 'Fact Checker Module'))
+const ctaLabel = computed(() => (isBn.value ? 'ইয়ুথ ফ্যাক্ট ফাইন্ডিং' : 'Youth Fact Finding'))
 
 const headerEl = useTemplateRef('headerEl')
 const hidden = ref(false)
@@ -131,7 +131,7 @@ onUnmounted(() => {
       </div>
 
       <RouterLink
-        to="/fact-checker"
+        to="/youth-fact-finding"
         class="rounded-button whitespace-nowrap bg-brand-500 px-[18px] py-4 text-center text-sm font-medium leading-none text-accent-50"
       >
         {{ ctaLabel }}
@@ -140,7 +140,7 @@ onUnmounted(() => {
 
     <div class="flex shrink-0 items-center gap-3 lg:hidden">
       <RouterLink
-        to="/fact-checker"
+        to="/youth-fact-finding"
         class="rounded-button whitespace-nowrap bg-brand-500 px-3 py-2.5 text-center text-xs font-medium leading-none text-accent-50"
       >
         {{ ctaLabel }}

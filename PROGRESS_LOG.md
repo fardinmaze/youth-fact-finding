@@ -4,6 +4,22 @@ Newest first. Each entry says what changed, the decisions behind it, and what is
 
 ---
 
+## 2026-10-01
+
+### Changed
+
+**Tool renamed: "Fact Checker" → "Youth Fact Finding"** (team's chosen name)
+- Bangla: **ইয়ুথ ফ্যাক্ট ফাইন্ডিং** (transliterated, like the old "ফ্যাক্ট চেকার").
+- Updated everywhere the tool is named: header CTA (desktop + mobile), "What we do" button, home intro eyebrow, wizard eyebrow, Help page back link, footer Platform link (was "Verify" / "যাচাই করুন"). English home CTA "Fact Check Now" → "Verify Now" (matches the Bangla "এখনই যাচাই করুন").
+- URL is now `/youth-fact-finding`; `/fact-checker` redirects there so shared links/bookmarks keep working. Result-card download is now `catch-bangladesh-youth-fact-finding-<verdict>.png`.
+- Not renamed (generic wording, not the tool's name): "A fact-checking and awareness building platform in Bangla", and the footer Modules link "Fact-Checking Tool" (points to Module 9 "Tools and techniques to verify").
+- Internal code names (`factChecker` copy keys, `components/factchecker/`, route name) unchanged.
+
+### Open items
+- Confirm the Bangla form of the name: ইয়ুথ ফ্যাক্ট ফাইন্ডিং (transliteration) vs a translated form such as যুব তথ্য অনুসন্ধান.
+
+---
+
 ## 2026-09-28
 
 ### Changed

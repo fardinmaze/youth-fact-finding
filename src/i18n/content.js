@@ -28,7 +28,7 @@ export const bn = {
   pillarsSection: {
     eyebrow: 'আমরা কী করছি, কেন করছি, এবং কীভাবে করছি',
     headline: 'তথ্য বিভ্রান্তি প্রতিরোধে যুব ও কমিউনিটি-নেতৃত্বাধীন একটি উদ্যোগ',
-    ctaButton: 'ফ্যাক্ট চেকার দেখুন',
+    ctaButton: 'ইয়ুথ ফ্যাক্ট ফাইন্ডিং দেখুন',
     subhead1: 'বাংলায় তথ্য যাচাইয়ের জন্য একটি সচেতনতামূলক প্লাটফর্ম',
     body1: [
       'কক্সবাজারের যুবদেরকে সচেতন ডিজিটাল নাগরিক হিসেবে সক্ষম করে তোলার জন্য এই প্লাটফর্মটি একটি ডিজিটাল টুল হিসেবে কাজ করবে।',
@@ -58,7 +58,7 @@ export const bn = {
   },
 
   factCheckerIntro: {
-    eyebrow: 'ফ্যাক্ট-চেকিং টুল',
+    eyebrow: 'ইয়ুথ ফ্যাক্ট ফাইন্ডিং',
     headline: 'সন্দেহ হচ্ছে? এখনই যাচাই করুন',
     subtitle: 'আপনার হাতের কাছেই একটি সহজ টুল — এক মিনিটে সত্য-মিথ্যা যাচাই করুন',
     para1:
@@ -108,7 +108,7 @@ export const bn = {
     nav: { next: 'পরবর্তী', back: 'ফিরে যান' },
     progress: { stepLabel: 'ধাপ' },
     start: {
-      eyebrow: 'ফ্যাক্ট চেকার মডিউল',
+      eyebrow: 'ইয়ুথ ফ্যাক্ট ফাইন্ডিং',
       headline: 'আপনি কী যাচাই করতে চান?',
       subtitle: 'শুরু করার আগে বলুন, আপনি কোন ধরনের কনটেন্ট নিয়ে সন্দেহে আছেন।',
       options: [
@@ -287,7 +287,7 @@ export const bn = {
     contactHeading: 'যোগাযোগ করুন',
     note: 'জরুরি বিপদের ক্ষেত্রে স্থানীয় প্রশাসন বা জরুরি সেবায় (৯৯৯) যোগাযোগ করুন।',
     backHome: 'হোমে ফিরুন',
-    backFactChecker: 'ফ্যাক্ট চেকার মডিউলে ফিরুন',
+    backFactChecker: 'ইয়ুথ ফ্যাক্ট ফাইন্ডিং-এ ফিরুন',
   },
 
   contactPage: {
@@ -321,7 +321,7 @@ export const bn = {
         title: 'প্ল্যাটফর্ম',
         links: [
           { label: 'হোম', to: '/' },
-          { label: 'যাচাই করুন', to: '/fact-checker' },
+          { label: 'ইয়ুথ ফ্যাক্ট ফাইন্ডিং', to: '/youth-fact-finding' },
           { label: 'শেখার উপকরণ', to: '/learn' },
         ],
       },
@@ -381,7 +381,7 @@ export const en = {
   pillarsSection: {
     eyebrow: 'What we do, why we do it, and how',
     headline: 'A sustainable, youth and community-led initiative against misinformation',
-    ctaButton: 'Explore Fact Checker',
+    ctaButton: 'Explore Youth Fact Finding',
     subhead1: 'A fact-checking and awareness building platform in Bangla',
     body1: [
       "This platform is a digital tool built for Cox's Bazar's youth community, where anyone can verify a news item, photo, video, or forwarded message in a few simple steps, learn to recognize misinformation, and report suspicious content when needed.",
@@ -408,7 +408,7 @@ export const en = {
   },
 
   factCheckerIntro: {
-    eyebrow: 'Fact-Checking Tool',
+    eyebrow: 'Youth Fact Finding',
     headline: 'Not sure? Verify it now',
     subtitle: 'A simple tool right at your fingertips — verify true from false in a minute',
     para1:
@@ -422,7 +422,7 @@ export const en = {
       { title: 'Answer step by step', desc: 'Answer a few simple questions about the source, date, context, and media' },
       { title: 'Get your result', desc: 'Get a clear answer: verified, needs more checking, or misleading' },
     ],
-    ctaPrimary: 'Fact Check Now',
+    ctaPrimary: 'Verify Now',
     ctaSecondary: 'Explore Our Learning Materials',
   },
 
@@ -458,7 +458,7 @@ export const en = {
     nav: { next: 'Next', back: 'Back' },
     progress: { stepLabel: 'Step' },
     start: {
-      eyebrow: 'Fact Checker Module',
+      eyebrow: 'Youth Fact Finding',
       headline: 'What do you want to verify?',
       subtitle: "Before we start, tell us what kind of content you're unsure about.",
       options: [
@@ -637,7 +637,7 @@ export const en = {
     contactHeading: 'Get in Touch',
     note: 'In case of immediate danger, contact local authorities or emergency services (999).',
     backHome: 'Back to Home',
-    backFactChecker: 'Back to Fact Checker Module',
+    backFactChecker: 'Back to Youth Fact Finding',
   },
 
   contactPage: {
@@ -671,7 +671,7 @@ export const en = {
         title: 'Platform',
         links: [
           { label: 'Home', to: '/' },
-          { label: 'Verify', to: '/fact-checker' },
+          { label: 'Youth Fact Finding', to: '/youth-fact-finding' },
           { label: 'Learning Materials', to: '/learn' },
         ],
       },
