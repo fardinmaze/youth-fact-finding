@@ -4,6 +4,25 @@ Newest first. Each entry says what changed, the decisions behind it, and what is
 
 ---
 
+## 2026-10-05
+
+### Changed
+
+**Learning-module PDFs replaced with the updated set** (from the team's Google Drive download, files dated 2026-10-04)
+- All 9 PDFs in `public/learning-materials/` replaced, keeping the same file names, so `src/data/learningModules.js` is unchanged.
+- Module 1 had been broken locally (the old file was removed before the code was updated); it loads again.
+- Total size down from ~65 MB to ~44 MB (~4.9 MB each; old Module 7 was 26 MB).
+- The Drive ZIP was deleted from `public/` so it is not deployed.
+
+**New hero image** (`assets/landing page.pngss.png` → copied over `src/assets/photos/hero-bg.png`)
+- Same size and composition as the previous illustration (2167×726, the 7 friends in the same place); the right side now has a red diagonal panel with a halftone pattern instead of the monument, flag and rickshaw.
+- No layout or code change needed. Checked at 1440px and 500px widths.
+
+### Open items
+- Takes effect on the live site after the next push + Vercel deploy.
+
+---
+
 ## 2026-10-01
 
 ### Changed
