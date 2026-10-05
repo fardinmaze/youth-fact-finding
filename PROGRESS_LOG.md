@@ -6,6 +6,18 @@ Newest first. Each entry says what changed, the decisions behind it, and what is
 
 ## 2026-10-05
 
+### Changed (later the same day)
+
+**Youth Fact Finding – two-column layout from step 2** (`src/views/FactCheckerView.vue`, new `src/components/factchecker/ContentPreview.vue`)
+- From step 2 (Emotion check) through the Recap, the page is two columns on desktop (from 1024px): the content being checked on the left, the form on the right. Step 1 and the Result stay single-column — the result card already shows the content.
+- The left panel shows the uploaded image (whole image, not cropped), the link with its thumbnail and an "Open link ↗" button, or both. If nothing was attached, it shows "No image or link added" with a hint to go back to step 1. The content-type tag (Image, Video, …) sits next to the panel title.
+- The panel stays in view (sticky) while the form scrolls on desktop. On phones and tablets it sits above the form.
+- New copy `factChecker.preview` (bn + en): label, noAttachment, noAttachmentHint, openLink.
+- Every step change (Next, Back, Check something else) now scrolls the page to the top. Before, the page kept its scroll position, so after a long step 1 the next step opened part-way down with its heading hidden.
+
+### Open items
+- Bangla wording needs sign-off: "আপনি যা যাচাই করছেন", "কোনো ছবি বা লিংক যুক্ত করা হয়নি", "লিংকটি খুলুন".
+
 ### Changed
 
 **Learning-module PDFs replaced with the updated set** (from the team's Google Drive download, files dated 2026-10-04)

@@ -124,6 +124,12 @@ export const bn = {
       imageLabel: 'অথবা স্ক্রিনশট/ছবি আপলোড করুন',
       imageButtonText: 'ছবি বাছাই করুন',
     },
+    preview: {
+      label: 'আপনি যা যাচাই করছেন',
+      noAttachment: 'কোনো ছবি বা লিংক যুক্ত করা হয়নি',
+      noAttachmentHint: 'প্রথম ধাপে ফিরে গিয়ে ছবি বা লিংক যুক্ত করলে এখানে দেখা যাবে।',
+      openLink: 'লিংকটি খুলুন ↗',
+    },
     emotion: {
       title: 'আবেগ যাচাই',
       prompt: 'এটা দেখে আপনার কেমন লাগছে?',
@@ -473,6 +479,12 @@ export const en = {
       linkPlaceholder: 'https://...',
       imageLabel: 'Or upload a screenshot/image',
       imageButtonText: 'Choose image',
+    },
+    preview: {
+      label: "What you're checking",
+      noAttachment: 'No image or link added',
+      noAttachmentHint: 'Go back to the first step to add an image or link, and it will show here.',
+      openLink: 'Open link ↗',
     },
     emotion: {
       title: 'Emotion Check',
