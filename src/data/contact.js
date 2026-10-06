@@ -12,4 +12,6 @@ export const CONTACT_HREF = {
   emergency: 'tel:999',
   // ActionAid Bangladesh's own official site (not this platform) — footer "About ActionAid" redirects here.
   actionAidOfficial: 'https://actionaidbd.org/',
+  // The only social channel shown (footer + /contact).
+  facebook: 'https://www.facebook.com/theyouthpeacenetwork/',
 }

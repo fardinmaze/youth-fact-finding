@@ -1,24 +1,11 @@
 <script setup>
 import logoActionAid from '@/assets/logo-actionaid.png'
-import facebookIcon from '@/assets/icons/social/facebook.svg'
-import linkedinIcon from '@/assets/icons/social/linkedin.svg'
-import snapchatIcon from '@/assets/icons/social/snapchat.svg'
-import flickrIcon from '@/assets/icons/social/flickr.svg'
-import instagramIcon from '@/assets/icons/social/instagram.svg'
 import { RouterLink } from 'vue-router'
 import { useLang } from '@/stores/lang'
 import { CONTACT_HREF } from '@/data/contact'
 import { PARTNERS } from '@/data/partners'
 
 const { t } = useLang()
-
-const SOCIALS = [
-  { icon: facebookIcon, name: 'Facebook' },
-  { icon: linkedinIcon, name: 'LinkedIn' },
-  { icon: snapchatIcon, name: 'Snapchat' },
-  { icon: flickrIcon, name: 'Flickr' },
-  { icon: instagramIcon, name: 'Instagram' },
-]
 </script>
 
 <template>
@@ -38,13 +25,17 @@ const SOCIALS = [
         </div>
 
         <div class="flex items-center gap-5">
-          <img
-            v-for="social in SOCIALS"
-            :key="social.name"
-            :src="social.icon"
-            :alt="social.name"
-            class="h-5 w-5"
-          />
+          <a
+            :href="CONTACT_HREF.facebook"
+            target="_blank"
+            rel="noopener"
+            aria-label="Facebook"
+            class="text-accent-white transition-opacity hover:opacity-75"
+          >
+            <svg viewBox="0 0 20 20" class="h-5 w-5" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12.1743 5.08226C12.6397 4.651 13.36 4.698 13.4129 4.70035L16.427 4.69918L16.4928 0.350177L16.038 0.238542C15.7466 0.166875 14.8547 2.38419e-07 12.8888 2.38419e-07C9.38821 2.38419e-07 7.03568 2.45006 7.03568 6.09518V7.07403H3.51042V11.7744H7.03568V20H11.736V11.7744H15.4517L16.098 7.07403H11.736V6.3537C11.736 5.78144 11.8841 5.35253 12.1743 5.08226Z" />
+            </svg>
+          </a>
         </div>
       </div>
 

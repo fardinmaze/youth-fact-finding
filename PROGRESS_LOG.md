@@ -4,6 +4,18 @@ Newest first. Each entry says what changed, the decisions behind it, and what is
 
 ---
 
+## 2026-10-06
+
+### Changed
+
+**Social links: Facebook only** (`src/components/layout/AppFooter.vue`, `src/views/ContactView.vue`, `src/data/contact.js`)
+- The footer and the Contact page each showed five unlinked icons (Facebook, LinkedIn, Snapchat, Flickr, Instagram). Both now show only Facebook, linked to https://www.facebook.com/theyouthpeacenetwork/ (opens in a new tab).
+- The URL lives in `CONTACT_HREF.facebook` in `src/data/contact.js` with the other contact links.
+- The icon is now an inline SVG in the text colour: white in the footer, dark on the Contact page (turns brand red on hover). The old icon files were white, so on the Contact page's near-white card they were invisible.
+- The LinkedIn, Snapchat, Flickr and Instagram SVGs are still in `src/assets/icons/social/`, unused.
+
+---
+
 ## 2026-10-05
 
 ### Changed (later the same day)
