@@ -35,7 +35,7 @@ const pdf = computed(() => (mod.value ? getModulePdf(mod.value, isBn.value) : ''
       </a>
     </div>
 
-    <PdfViewer :key="mod.slug" :src="pdf" :max-width="1200" class="min-h-0 flex-1" />
+    <PdfViewer :key="pdf" :src="pdf" :max-width="1200" class="min-h-0 flex-1" />
   </div>
 
   <main v-else class="flex flex-col gap-4 px-6 py-14">

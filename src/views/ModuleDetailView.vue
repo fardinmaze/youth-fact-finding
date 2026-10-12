@@ -50,7 +50,7 @@ const pdf = computed(() => (mod.value ? getModulePdf(mod.value, isBn.value) : ''
       </RouterLink>
     </div>
 
-    <PdfViewer :key="mod.slug" :src="pdf" class="h-[80vh] w-full border border-accent-100" />
+    <PdfViewer :key="pdf" :src="pdf" class="h-[80vh] w-full border border-accent-100" />
   </main>
 
   <main v-else class="flex flex-col gap-4 px-[var(--page-gutter)] py-14">

@@ -1,10 +1,24 @@
 import { reactive, computed, watchEffect } from 'vue'
 import { bn, en } from '@/i18n/content'
 
-const state = reactive({ lang: 'bn' })
+// Remembered per browser so a page opened in a new tab (e.g. the full-screen PDF reader) keeps the chosen language.
+const KEY = 'catch-lang'
+function savedLang() {
+  try {
+    const v = localStorage.getItem(KEY)
+    return v === 'en' || v === 'bn' ? v : 'bn'
+  } catch {
+    return 'bn'
+  }
+}
+
+const state = reactive({ lang: savedLang() })
 
 watchEffect(() => {
   document.documentElement.setAttribute('lang', state.lang)
+  try {
+    localStorage.setItem(KEY, state.lang)
+  } catch {}
 })
 
 export function useLang() {
