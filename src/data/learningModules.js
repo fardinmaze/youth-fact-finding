@@ -1,5 +1,6 @@
 // Source of truth for the 9 curriculum modules — used by the homepage preview,
-// the /learn grid, and each module's detail page. PDFs live in public/learning-materials/.
+// the /learn grid, and each module's detail page. PDFs live in public/learning-materials/:
+// module-N-<slug>.pdf is the Bangla edition, module-N-<slug>-en.pdf the English one.
 
 export const MODULES = [
   {
@@ -93,6 +94,11 @@ export const MODULES = [
     },
   },
 ]
+
+// The PDF matching the site language (Bangla file by default, '-en' file for English).
+export function getModulePdf(mod, isBn) {
+  return isBn ? mod.pdf : mod.pdf.replace(/\.pdf$/, '-en.pdf')
+}
 
 export function getModuleBySlug(slug) {
   return MODULES.find((m) => m.slug === slug)

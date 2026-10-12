@@ -4,12 +4,13 @@ import { RouterLink, useRoute } from 'vue-router'
 import arrowUpRight from '@/assets/icons/arrow-up-right.svg?raw'
 import PdfViewer from '@/components/learn/PdfViewer.vue'
 import { useLang } from '@/stores/lang'
-import { getModuleBySlug } from '@/data/learningModules'
+import { getModuleBySlug, getModulePdf } from '@/data/learningModules'
 
 const route = useRoute()
 const { t, isBn } = useLang()
 
 const mod = computed(() => getModuleBySlug(route.params.slug))
+const pdf = computed(() => (mod.value ? getModulePdf(mod.value, isBn.value) : ''))
 </script>
 
 <template>
@@ -30,8 +31,8 @@ const mod = computed(() => getModuleBySlug(route.params.slug))
 
     <div class="flex flex-wrap items-center gap-3">
       <a
-        :href="mod.pdf"
-        :download="mod.pdf.split('/').pop()"
+        :href="pdf"
+        :download="pdf.split('/').pop()"
         class="flex w-fit items-center gap-3 rounded-button border border-brand-500 px-6 py-3 font-heading text-xs font-medium text-brand-500"
       >
         {{ t.moduleDetail.download }}
@@ -49,7 +50,7 @@ const mod = computed(() => getModuleBySlug(route.params.slug))
       </RouterLink>
     </div>
 
-    <PdfViewer :key="mod.slug" :src="mod.pdf" class="h-[80vh] w-full border border-accent-100" />
+    <PdfViewer :key="mod.slug" :src="pdf" class="h-[80vh] w-full border border-accent-100" />
   </main>
 
   <main v-else class="flex flex-col gap-4 px-[var(--page-gutter)] py-14">
