@@ -102,13 +102,21 @@ export const POCKET_BOOKS = [
   {
     slug: 'digital-literacy-pocket-book',
     pdf: '/learning-materials/digital-literacy-pocket-books/digital-literacy-pocket-book.pdf',
+    // Page 1 of each PDF as a JPEG (720px wide), so the card doesn't have to download the 4.5 MB file just to show a cover.
+    cover: '/learning-materials/digital-literacy-pocket-books/digital-literacy-pocket-book-cover.jpg',
     title: { bn: 'ডিজিটাল সাক্ষরতা পকেট বুক', en: 'Digital Literacy Pocket Book' },
+    // The tagline printed on the cover itself
     subtitle: {
-      bn: 'অনলাইনে নিরাপদ ও সচেতন থাকার সহজ গাইড — হাতের কাছে রাখার মতো ছোট বই।',
-      en: 'A short, easy-to-carry guide to staying safe and aware online.',
+      bn: 'ডিজিটাল নিরাপত্তা, তথ্য যাচাই ও সামাজিক সম্প্রীতি বিষয়ে যুবদের জন্য পকেটবই',
+      en: 'A youth guide to digital safety, information verification, and social cohesion',
     },
   },
 ]
+
+// The cover image matching the site language (same '-en' convention as the PDFs).
+export function getBookCover(book, isBn) {
+  return isBn ? book.cover : book.cover.replace(/\.jpg$/, '-en.jpg')
+}
 
 // The PDF matching the site language (Bangla file by default, '-en' file for English).
 export function getModulePdf(mod, isBn) {

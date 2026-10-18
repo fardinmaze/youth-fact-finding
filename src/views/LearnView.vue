@@ -3,7 +3,7 @@ import { computed } from 'vue'
 import { RouterLink, useRoute, useRouter } from 'vue-router'
 import arrowUpRight from '@/assets/icons/arrow-up-right.svg?raw'
 import { useLang } from '@/stores/lang'
-import { MODULES, POCKET_BOOKS } from '@/data/learningModules'
+import { MODULES, POCKET_BOOKS, getBookCover } from '@/data/learningModules'
 
 const { t, isBn } = useLang()
 const route = useRoute()
@@ -125,20 +125,14 @@ function onKey(e) {
         :key="book.slug"
         class="flex flex-col items-center gap-8 overflow-hidden rounded-lg bg-accent-900 p-6 sm:p-10 md:flex-row md:gap-12"
       >
-        <!-- Book cover mock: red cover with a darker spine -->
-        <div
-          class="relative flex aspect-[3/4] w-40 shrink-0 flex-col justify-between rounded-r-md rounded-l-sm bg-brand-500 p-4 shadow-[0_24px_40px_-12px_rgba(0,0,0,0.7)] sm:w-48"
-          aria-hidden="true"
-        >
-          <span class="absolute inset-y-0 left-0 w-3 rounded-l-sm bg-black/25" />
-          <span class="pl-3 font-heading text-[10px] font-semibold uppercase tracking-widest text-white/80">CATCH</span>
-          <span class="pl-3 font-heading text-lg font-bold leading-tight text-white sm:text-xl">
-            {{ isBn ? book.title.bn : book.title.en }}
-          </span>
-          <span class="pl-3 font-heading text-[10px] font-medium uppercase tracking-widest text-white/80">
-            {{ isBn ? 'বাংলা' : 'English' }} · PDF
-          </span>
-        </div>
+        <!-- The real cover (page 1 of the PDF), Bangla or English to match the site language -->
+        <img
+          :src="getBookCover(book, isBn)"
+          :alt="isBn ? book.title.bn : book.title.en"
+          width="720"
+          height="943"
+          class="w-44 shrink-0 rounded-sm bg-white shadow-[0_24px_40px_-12px_rgba(0,0,0,0.7)] sm:w-56"
+        />
 
         <div class="flex flex-col items-center gap-5 text-center md:items-start md:text-left">
           <p class="rounded-full bg-brand-500 px-3 py-1 font-heading text-xs font-semibold uppercase tracking-wider text-white">
