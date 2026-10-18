@@ -87,12 +87,14 @@ export const bn = {
     eyebrow: 'শেখার উপকরণ',
     headline: 'সবগুলো শেখার মডিউল',
     subtitle: 'তথ্য বিভ্রান্তির ৯টি ধরন সহজ ভাষায় — প্রতিটি মডিউল পিডিএফ আকারে পড়া ও ডাউনলোড করা যাবে',
+    tabs: { modules: 'মডিউল', pocketBooks: 'পকেট বুক' },
   },
 
   pocketBooks: {
     heading: 'ডিজিটাল সাক্ষরতা পকেট বুক',
     subtitle: 'অনলাইনে নিরাপদ থাকার সহজ গাইড — পিডিএফ আকারে পড়া ও ডাউনলোড করা যাবে',
     label: 'পকেট বুক',
+    open: 'বইটি পড়ুন',
   },
 
   moduleDetail: {
@@ -449,12 +451,14 @@ export const en = {
     eyebrow: 'Learning Materials',
     headline: 'All Learning Modules',
     subtitle: 'The 9 types of misinformation, explained simply — every module is readable and downloadable as a PDF',
+    tabs: { modules: 'Modules', pocketBooks: 'Pocket Books' },
   },
 
   pocketBooks: {
     heading: 'Digital Literacy Pocket Books',
     subtitle: 'A simple guide to staying safe online — readable and downloadable as a PDF',
     label: 'Pocket Book',
+    open: 'Read the book',
   },
 
   moduleDetail: {
