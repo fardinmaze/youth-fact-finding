@@ -20,7 +20,7 @@ const pdf = computed(() => (mod.value ? getModulePdf(mod.value, isBn.value) : ''
     </RouterLink>
 
     <div class="flex flex-col items-start gap-1.5">
-      <p class="bg-accent-900 px-3 py-2 font-heading text-base text-accent-50">Module {{ mod.number }}</p>
+      <p class="bg-accent-900 px-3 py-2 font-heading text-base text-accent-50">{{ mod.number ? `Module ${mod.number}` : t.pocketBooks.label }}</p>
       <p class="font-heading text-3xl font-bold leading-snug tracking-tight text-brand-500 lg:text-[48px]">
         {{ isBn ? mod.title.bn : mod.title.en }}
       </p>

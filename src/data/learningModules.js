@@ -95,11 +95,26 @@ export const MODULES = [
   },
 ]
 
+// Digital Literacy Pocket Books — a separate folder on the Learn page, shown below the 9 modules.
+// Same convention: the Bangla file by default, the '-en' file for English. They reuse the module
+// detail and reader pages (no `number`, so those pages label them as a pocket book instead of 'Module N').
+export const POCKET_BOOKS = [
+  {
+    slug: 'digital-literacy-pocket-book',
+    pdf: '/learning-materials/digital-literacy-pocket-books/digital-literacy-pocket-book.pdf',
+    title: { bn: 'ডিজিটাল সাক্ষরতা পকেট বুক', en: 'Digital Literacy Pocket Book' },
+    subtitle: {
+      bn: 'অনলাইনে নিরাপদ ও সচেতন থাকার সহজ গাইড — হাতের কাছে রাখার মতো ছোট বই।',
+      en: 'A short, easy-to-carry guide to staying safe and aware online.',
+    },
+  },
+]
+
 // The PDF matching the site language (Bangla file by default, '-en' file for English).
 export function getModulePdf(mod, isBn) {
   return isBn ? mod.pdf : mod.pdf.replace(/\.pdf$/, '-en.pdf')
 }
 
 export function getModuleBySlug(slug) {
-  return MODULES.find((m) => m.slug === slug)
+  return MODULES.find((m) => m.slug === slug) ?? POCKET_BOOKS.find((m) => m.slug === slug)
 }

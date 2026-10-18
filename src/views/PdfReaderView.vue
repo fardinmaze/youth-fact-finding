@@ -24,7 +24,7 @@ const pdf = computed(() => (mod.value ? getModulePdf(mod.value, isBn.value) : ''
         {{ t.moduleDetail.backToModule }}
       </RouterLink>
       <p class="min-w-0 flex-1 truncate font-heading text-sm font-semibold text-accent-900">
-        Module {{ mod.number }} — {{ isBn ? mod.title.bn : mod.title.en }}
+        {{ mod.number ? `Module ${mod.number} — ` : `${t.pocketBooks.label} — ` }}{{ isBn ? mod.title.bn : mod.title.en }}
       </p>
       <a
         :href="pdf"

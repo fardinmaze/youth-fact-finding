@@ -89,6 +89,12 @@ export const bn = {
     subtitle: 'তথ্য বিভ্রান্তির ৯টি ধরন সহজ ভাষায় — প্রতিটি মডিউল পিডিএফ আকারে পড়া ও ডাউনলোড করা যাবে',
   },
 
+  pocketBooks: {
+    heading: 'ডিজিটাল সাক্ষরতা পকেট বুক',
+    subtitle: 'অনলাইনে নিরাপদ থাকার সহজ গাইড — পিডিএফ আকারে পড়া ও ডাউনলোড করা যাবে',
+    label: 'পকেট বুক',
+  },
+
   moduleDetail: {
     back: '← সব মডিউলে ফিরুন',
     download: 'পিডিএফ ডাউনলোড করুন',
@@ -443,6 +449,12 @@ export const en = {
     eyebrow: 'Learning Materials',
     headline: 'All Learning Modules',
     subtitle: 'The 9 types of misinformation, explained simply — every module is readable and downloadable as a PDF',
+  },
+
+  pocketBooks: {
+    heading: 'Digital Literacy Pocket Books',
+    subtitle: 'A simple guide to staying safe online — readable and downloadable as a PDF',
+    label: 'Pocket Book',
   },
 
   moduleDetail: {
